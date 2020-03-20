@@ -54,6 +54,17 @@
 		.single-item li img{width: 100%;}
 		.single-item{width: 100%;}
 
+		
+		.navbar-toggler{position: relative;z-index: 5}
+
+		.fll>span{float: left;font-size: 50px;font-weight: bold;margin-right: 14px;}
+		.fll>h2{height: 75px;line-height: 75px;padding-top: 6px;}
+		.fll>p{font-size: 18px;}
+
+		.half-line{width: 200px;height: 3px;background-color: #000;}
+
+		.oone p{width: 200px;height: 30px;background-color: white;line-height: 30px;}
+
 		@keyframes viewTop{
 			from{transform: translateY(0px);}
 			to{transform: translateY(-20px);}
@@ -75,13 +86,17 @@
 						
 				});
 		
-			
-
 				var mySlide = $(".slide").bxSlider({});
 
 				// $(".single-item").slick({
 				
 				// });
+
+				$(".top").click(function(){
+				// var scrollTop = $(window).scrollTop();
+				//$(window).scrollTop(0);
+					$("html,body").animate({scrollTop:0},500);
+				});
 		});
 	</script>
 	
@@ -91,7 +106,7 @@
 <div class="bg-white menu-top">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-white">
-		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+		  <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <a class="navbar-brand text-white" href="#!">
@@ -172,13 +187,11 @@
  	<div class="container" style="height: 800px;padding-top:150px;">
  		<div class="row">
  			<div class="col-12">
- 		
  					<ul class="slide">
  						<li><img src="images/slide_img01.png" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  					</ul>
- 			
  			</div>
  		</div>
  	</div>
@@ -188,13 +201,28 @@
  <section>
  	<div class="container py-5">
  		<div class="row">
- 			<div class="col-12">
+
+ 			<div class="col-12 fll clearfix">
+ 				<span>why</span>
  				<h2 class="pb-2">왜 써밋으로 공부해야 할까요?</h2>
+ 				<p>자신감이 부족한 아이? 열심히해도 성적은 제자리걸음?<br>써밋은 다릅니다</p>
  			</div>
- 			<div class="col-4 bg-warning d-flex align-items-center justify-content-center text-white text-center " style="height: 600px;">img01</div>
- 			<div class="col-4 bg-danger d-flex align-items-center justify-content-center text-white text-center" style="height: 600px;">img02</div>
- 			<div class="col-4 bg-success d-flex align-items-center justify-content-center text-white text-center" style="height: 600px;">img03</div>
- 		</div>
+
+ 			<div class="col-4 bg-warning text-center oone" style="height: 600px;position: relative;">
+				<h2 class="one" style="font-size: 23px;padding-top: 25px;">01 / 초등부터 고등까지 빈틈없이 실력을 채워주는 커리큘럼</h2>
+				<div class="pWrap" style="position: absolute; top: 30%;left: 50%;margin-left: -100px;width: 100px;">
+					<p>초등수학</p>
+					<p>중등수학</p>
+					<p>고등수학</p>
+				</div>
+ 			</div>
+	 			<div class="col-4 bg-danger text-center" style="height: 600px;">
+	 				<h2 class="two" style="font-size: 23px;padding-top: 25px;">02 / AI분석으로 학습자만을 위한 초개인화 수학학습</h2>
+	 			</div>
+	 			<div class="col-4 bg-success text-center" style="height: 600px;">
+	 				<h2 class="three" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
+	 			</div>
+	 		</div>
  	</div>
  </section>
 
@@ -236,14 +264,14 @@
  	</div>
  </section>
 
- <div class="top">top</div>
+
 
  <!-- footer -->
  <footer class="bg-info">
  	<p class="text-white d-flex justify-content-center align-items-center" style="line-height: 200px">footer</p>
  </footer>
 
-
+ <div class="top">top</div>
 
 </body>
 </html>
