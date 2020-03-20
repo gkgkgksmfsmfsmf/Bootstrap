@@ -5,12 +5,14 @@
 	<title>bootstrap_homepage</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/slick.min.js"></script>
 	<style>
-		.sliderWrap{/*width:1000px;position: relative;*/}
 
 		.bx-wrapper {
 		    -moz-box-shadow: none;
@@ -34,9 +36,9 @@
 			position: fixed;
 			right: 50px;
 			bottom: 50px;
-			width: 80px;
-			height: 80px;
-			line-height: 80px;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
 			border-radius: 50%;
 			background-color: #000;
 			color:white;
@@ -49,6 +51,9 @@
 
 		.top.addtop{opacity: 1}
 
+		.single-item li img{width: 100%;}
+		.single-item{width: 100%;}
+
 		@keyframes viewTop{
 			from{transform: translateY(0px);}
 			to{transform: translateY(-20px);}
@@ -57,14 +62,26 @@
 
 	<script>
 		$(function(){
-			$(window).scroll(function(){
-				$(".menu-top").addClass("fixed-top");
-				$(".top").addClass("addtop");
-			});
+				$(window).scroll(function(){
+						$(".menu-top").addClass("fixed-top");
+						$(document).mousewheel(function(event,delta){
+							if(delta<0){
+							$(".top").addClass("addtop");
+						}else{
+							$(".top").removeClass("addtop");
+						}
+						});
+						
+						
+				});
+		
+			
 
-			var mySlide = $(".slide").bxSlider({
+				var mySlide = $(".slide").bxSlider({});
 
-			})
+				// $(".single-item").slick({
+				
+				// });
 		});
 	</script>
 	
@@ -151,17 +168,17 @@
 	</div>
 </div>
  <!-- section_1 -->
- <section class="slideBg">
- 	<div class="container d-flex flex-column align-items-center text-center justify-content-center" style="height: 800px;">
+ <section class="bg-light"> <!-- slideBg -->
+ 	<div class="container" style="height: 800px;padding-top:150px;">
  		<div class="row">
  			<div class="col-12">
- 				<div class="slideWrap">
+ 		
  					<ul class="slide">
  						<li><img src="images/slide_img01.png" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  					</ul>
- 				</div>
+ 			
  			</div>
  		</div>
  	</div>
@@ -172,7 +189,7 @@
  	<div class="container py-5">
  		<div class="row">
  			<div class="col-12">
- 				<h2 class="pb-2">Lorem ipsum dolor sit amet.</h2>
+ 				<h2 class="pb-2">왜 써밋으로 공부해야 할까요?</h2>
  			</div>
  			<div class="col-4 bg-warning d-flex align-items-center justify-content-center text-white text-center " style="height: 600px;">img01</div>
  			<div class="col-4 bg-danger d-flex align-items-center justify-content-center text-white text-center" style="height: 600px;">img02</div>
