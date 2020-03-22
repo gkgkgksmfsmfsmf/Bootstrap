@@ -64,8 +64,9 @@
 		.half-line{width: 200px;height: 3px;background-color: #000;}
 
 		.oone p{width: 300px;height: 50px;background-color: white;line-height: 50px;}
-        .pWrap02{width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 16%;}
+        .pWrap02{width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 18%;}
         .pWrap02 p{width: 300px;height: 80px;background-color: white;line-height: 40px;}
+     
 
 		@keyframes viewTop{
 			from{transform: translateY(0px);}
@@ -212,10 +213,14 @@
 
  			<div class="col-md-4 bg-warning text-center oone" style="height: 600px;position: relative;">
 				<h2 class="one" style="font-size: 23px;padding-top: 25px;">01 / 초등부터 고등까지 빈틈없이 실력을 채워주는 커리큘럼</h2>
-				<div class="pWrap01" style="position: absolute; top: 16%;left: 50%;margin-left: -150px;width: 300px;">
-					<p>초등수학</p>
-					<p>중등수학</p>
-					<p>고등수학</p>
+				<div class="pWrap01" style="position: absolute; top: 25%;left: 50%;margin-left: -150px;width: 300px;">
+					<p style="margin-bottom: 0">초등수학</p>
+					<div class="math" style="width: 300px;height: 65px;background-color: red;margin-bottom: 15px"></div>
+					<p style="margin-bottom: 0">중등수학</p>
+                    <div class="math" style="width: 300px;height: 65px;background-color: red;margin-bottom: 15px"></div>
+					<p style="margin-bottom: 0">고등수학</p>
+                    <div class="math" style="width: 300px;height: 65px;background-color: red;margin-bottom: 15px"></div>
+
 				</div>
  			</div>
 	 			<div class="col-md-4 bg-danger text-center" style="height: 600px;position: relative">
@@ -231,17 +236,23 @@
 	 			</div>
 	 			<div class="col-md-4 bg-success text-center" style="height: 600px;">
 	 				<h2 class="three" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
-	 				<div class="student clearfix" style="width: 350px;position: absolute;top:16%;left:50%;margin-left: -175px;background-color: violet;">
+	 				<div class="student clearfix" style="width: 350px;position: absolute;top:25%;left:50%;margin-left: -175px;background-color: violet;">
 	 				    <div class="img" style="width:120px;height: 120px;background-color: white;border-radius: 60px;float: left"></div>
 	 				    <div class="img_text" style="width: 230px;height: 120px;background-color: aquamarine;float: right;padding-top:25px;">
 	 				        <p>동영상 강의와 문제풀이를<br> 테블릿으로 학습하고 , 개념노트로 예.복습을 합니다.</p>
 	 				    </div>
 	 				</div>
-	 				<div class="teacher clearfix" style="width: 350px;position: absolute;top:42%;left:50%;margin-left: -175px;background-color: violet;">
-	 				    <div class="img" style="width:120px;height: 120px;background-color: white;border-radius: 60px;float: left"></div>
-	 				    <div class="img_text" style="width: 230px;height: 120px;background-color: aquamarine;float: right;padding-top:25px;">
+	 				<div class="teacher clearfix" style="width: 350px;position: absolute;top:50%;left:50%;margin-left: -175px;background-color: violet;">
+	 				    <div class="img" style="width:120px;height: 120px;background-color: white;border-radius: 60px;float: right"></div>
+	 				    <div class="img_text" style="width: 230px;height: 120px;background-color: aquamarine;float: left;padding-top:25px;">
 	 				        <p>선생님은 학생의 학습과정을 실시간 모니터링하면서,<br> 학습 동기부여 및 코칭을 합니다.</p>
 	 				    </div>
+	 				</div>
+	 				<div class="imgWrap clearfix" style="width: 350px;position: absolute;top: 75%;height: 100px;left: 50%;margin-left: -175px;">
+	 				    <div style="float: left;width: 80px;height: 100px;background-color: orange;margin-right: 10px"></div>
+	 				    <div style="float: left;width: 80px;height: 100px;background-color: orange;margin-right: 10px"></div>
+	 				    <div style="float: left;width: 80px;height: 100px;background-color: orange;margin-right: 10px"></div>
+	 				    <div style="float: left;width: 80px;height: 100px;background-color: orange"></div>
 	 				</div>
 	 			</div>
 	 		</div>
@@ -249,20 +260,19 @@
  </section>
 
 <!-- section_3	 -->
-<section class="bg-dark py-5">
+<section class="bg-light py-5">
  	<div class="container">
  		<div class="row">
- 			<div class="col-12">
- 				<h2 class="pb-2 text-white">Lorem ipsum dolor sit amet.</h2>
+ 			<div class="col-12 fll clearfix">
+ 				<span>HOW</span>
+ 				<h2 class="pb-2">초,중,고등수학을 기초 연산부터 내신까지 한번에!</h2>
  			</div>
 
- 			<div class="col-4 bg-warning d-flex align-items-center justify-content-center text-white text-center" style="height: 300px;">img01</div>
- 			<div class="col-4 bg-danger d-flex align-items-center justify-content-center text-white text-center" style="height: 300px;">img02</div>
- 			<div class="col-4 bg-success d-flex align-items-center justify-content-center text-white text-center" style="height: 300px;">img03</div>
+ 			<div class="col-12 bg-warning d-flex align-items-center justify-content-center text-white text-center" style="height: 300px;">img01</div>
 
- 			<div class="col-4 bg-warning d-flex align-items-center justify-content-center text-white text-center " style="height: 300px;">img01</div>
- 			<div class="col-4 bg-danger d-flex align-items-center justify-content-center text-white text-center" style="height: 300px;">img02</div>
- 			<div class="col-4 bg-success d-flex align-items-center justify-content-center text-white text-center" style="height: 300px;">img03</div>
+ 			<div class="col-6 bg-info d-flex align-items-center justify-content-center text-white text-center " style="height: 300px;">img01</div>
+ 			<div class="col-6 bg-danger d-flex align-items-center justify-content-center text-white text-center" style="height: 300px;">img02</div>
+ 			
  		</div>
  	</div>
  </section>
