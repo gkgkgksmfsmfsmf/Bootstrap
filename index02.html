@@ -57,11 +57,7 @@
 		
 		.navbar-toggler{position: relative;z-index: 5}
 
-		.fll>span{float: left;font-size: 50px;font-weight: bold;margin-right: 14px;}
-		.fll>h2{height: 75px;line-height: 75px;padding-top: 6px;}
-		.fll>p{font-size: 18px;}
-
-		.half-line{width: 200px;height: 3px;background-color: #000;}
+		
 
 		/*.oone p{width: 300px;height: 50px;background-color: white;line-height: 50px;}*/
         /*.pWrap02{width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 18%;}*/
@@ -100,6 +96,44 @@
 				//$(window).scrollTop(0);
 					$("html,body").animate({scrollTop:0},500);
 				});
+
+			var count1=0;
+			var count2=0;
+			var count3=0;
+
+			function cnum1(){
+				if(count1<10){
+					//count = count+10;
+					count1++;
+				}
+					$(".c1").text(count1);
+			}
+		
+			var num1 = setInterval(cnum1,50);
+			var num2 = setInterval(cnum2,50);
+			var num3 = setInterval(cnum3,50);
+
+
+			function cnum2(){
+				if(count2<160){
+					//count = count+10;
+					count2=count2+8;
+				}
+					$(".c2").text(count2);
+			}
+			function cnum3(){
+				if(count3<90000){
+					count3 = count3+3000;
+					
+				}
+					$(".c3").text(count3);
+			}
+
+			
+		
+		
+
+
 		});
 	</script>
 	
@@ -140,7 +174,7 @@
 </div>
  <!-- section_1 -->
  <section class="bg-light"> <!-- slideBg -->
- 	<div class="container" style="_height: 800px;padding-top:120px;">
+ 	<div class="container" style="_height: 800px;padding-top:100px;">
  		<div class="row">
  			<div class="col-12">
  					<ul class="slide">
@@ -160,7 +194,7 @@
 
  			<div class="col-12 fll clearfix">
 
- 				<span>why</span>
+ 				<span class="font-weight-bold mr-2" style="font-size:50px">why</span>
  				<h2 class="pb-2">왜 써밋으로 공부해야 할까요?</h2>
  			</div>
 
@@ -170,24 +204,24 @@
 				
 					<div class="row px-3">
 						<div class="col-md-4">
-							<p class="col-md-12 bg-white py-2 mb-0">초등수학</p>
-							<div class="col-md-12 bg-info mb-2 py-2">9,50,100까지의 수</div>
-							<div class="col-md-12 bg-info mb-2 py-2">덧셈과 뺄셈</div>
-							<div class="col-md-12 bg-info mb-2 py-2">곱셈,곱셈구구</div>
-							<div class="col-md-12 bg-info mb-2 py-2">약수와 배수,약분과 통분</div>
+							<p class="col-md-12 bg-white py-2 mb-md-0 mb-3">초등수학</p>
+							<div class="d-md-block d-none bg-info mb-2 py-2">9,50,100까지의 수</div>
+							<div class="d-md-block d-none bg-info mb-2 py-2">덧셈과 뺄셈</div>
+							<div class="d-md-block d-none bg-info mb-2 py-2">곱셈,곱셈구구</div>
+							<div class="d-md-block d-none bg-info mb-2 py-2">약수와 배수,약분과 통분</div>
 						</div>
 						
 						<div class="col-md-4">
-							<p class="col-md-12 bg-white py-2 mb-0 ">중등수학</p>
-							          <div class="col-md-12 bg-success mb-2 py-2">소인수분해 최대공약수와 최소공배수</div>
-							          <div class="col-md-12 bg-success mb-2 py-2">정수와 유리수</div>
-							          <div class="col-md-12 bg-success mb-2 py-2">유리수와 순환소수</div>
-							          <div class="col-md-12 bg-success mb-2 py-2">제곱근과 실수</div>
+							<p class="col-md-12 bg-white py-2 mb-md-0 mb-3 ">중등수학</p>
+							          <div class="d-md-block d-none bg-success mb-2 py-2">소인수분해 최대공약수와 최소공배수</div>
+							          <div class="d-md-block d-none bg-success mb-2 py-2">정수와 유리수</div>
+							          <div class="d-md-block d-none bg-success mb-2 py-2">유리수와 순환소수</div>
+							          <div class="d-md-block d-none bg-success mb-2 py-2">제곱근과 실수</div>
 						</div>
 						
 						<div class="col-md-4">
-							<p class="col-md-12 bg-white py-2 mb-0">고등수학</p>
-							          <div class="col-md-12 bg-danger py-2">지수,로그(수학I)</div>
+							<p class="col-md-12 bg-white py-2 mb-md-0 mb-3">고등수학</p>
+							          <div class="d-md-block d-none bg-danger py-2">지수,로그(수학I)</div>
 						</div>
 					</div>
 
@@ -239,12 +273,12 @@
 						</div>
 						<div class="col-4 bg-info"></div>
 
-						<div class="row">
-	 					    <div class="col-3">1</div>
-	 					    <div class="col-3">2</div>
-	 					    <div class="col-3">3</div>
-	 					    <div class="col-3">4</div>
-	 					</div>
+						
+	 					    <div class="col-3 bg-warning">1</div>
+	 					    <div class="col-3 bg-warning">2</div>
+	 					    <div class="col-3 bg-warning">3</div>
+	 					    <div class="col-3 bg-warning">4</div>
+	 				
 						
 					</div>
 
@@ -256,73 +290,74 @@
 	 		</div>
  	</div>
  </section>
-
+		
 <!-- section_3	 -->
-<section class="bg-light py-5">
+<section class="bg-info py-5">
  	<div class="container">
  		<div class="row">
- 			<div class="col-12 fll clearfix">
- 				<span>HOW</span>
- 				<h2 class="pb-2">초,중,고등수학을 기초 연산부터 내신까지 한번에!</h2>
+ 			<div class="col-12">
+ 				<span class="font-weight-bold mr-2" style="font-size:50px">HOW</span>
+ 				<h2 class="pb-2">초,중,고등수학을 기초 연산부터 내신까지 한번에!</x2>
  			</div>
 
- 			<div class="col-12 bg-warning pt-3" style="height: 300px;position: relative;">
- 				<div class="center" style="width: 970px;height: 270px;position: absolute;left: 50%;margin-left: -485px;">
- 					<div class="circle" style="width: 270px;height: 270px;border-radius: 185px;background-color:rgba(0,0,0,0.5);position: absolute;left: 0px;">
- 						<div style="width: 160px;height: 100px;background-color: green;top: 50%;margin-top: -50px;left: 50%;margin-left: -80px;position: absolute;">
- 							<p style="color: white;font-weight: bold;font-size: 20px;text-align: center;padding-top: 11px">기초 연산 완성</p>
- 							<div class="logo" style="width: 160px;height: 54px;background-color:red;"></div>
- 						</div>
- 					</div>
- 					<div class="circle" style="width: 270px;height: 270px;border-radius: 185px;background-color:rgba(0,0,0,0.5);position: absolute;left: 220px;">
- 						<div style="width: 160px;height: 100px;background-color: green;top: 50%;margin-top: -50px;left: 50%;margin-left: -80px;position: absolute;">
- 							<p style="color: white;font-weight: bold;font-size: 20px;text-align: center;padding-top: 11px">기초 연산 완성</p>
- 							<div class="logo" style="width: 160px;height: 54px;background-color:red;"></div>
- 						</div>
- 					</div>
- 					<div class="equal" style="width: 50px;height: 50px;background-color: #fff;position: absolute;left: 565px;top: 50%;margin-top: -25px;"></div>
- 					<div class="circle02" style="width: 270px;height: 270px;border-radius: 185px;background-color: rgba(0,0,0,0.5);position: absolute;left: 700px;">
- 						<p style="color: white;font-weight: bold;font-size: 25px;width: 230px;height: 30px;position: absolute;left: 50%;margin-left: -115px;top:50%;margin-top: -15px;text-align: center;">수학 실력 완성!</p>
- 					</div>
- 				</div>
+ 			<div class="d-none d-md-block bg-light ">
+ 				<img src="images/bootstrap-circle.png" alt="" class="w-100">
+ 			</div>
+ 			<div class="d-block d-md-none bg-light">
+ 				<img src="images/bootstrap-circle01.png" alt="" class="w-100">
  			</div>
 
- 			<div class="col-md-6 bg-info d-flex align-items-center justify-content-center text-white text-center " style="height: 628px;">
- 				<img src="images/gg.png" alt="">
+ 			<div class="col-md-6 px-0 mb-3 mb-md-0">
+ 				<img src="images/gg.png" class="w-100" alt="">
  			</div>
- 			<div class="col-md-6 bg-danger d-flex align-items-center justify-content-center text-white text-center" style="height: 628px;">
- 				<img src="images/gggg.png" alt="">
+ 			<div class="col-md-6 px-0">
+ 				<img src="images/gggg.png" class="w-100" alt="">
  			</div>
  			
  		</div>
  	</div>
  </section>
  <!-- section_4 -->
- <section>
- 	<div class="container py-5">
- 		<div class="row">
- 			<div class="col-12">
- 				<h2 class="pb-2">Lorem ipsum dolor sit amet.</h2>
+ <section class="bg-success d-flex" style="height: 700px;">
+ 	<div class="container text-white m-auto">
+ 			<div class="row">
+ 				<div class="col-12 bg-success d-flex">
+ 					<div class="tw m-auto">
+ 						<h2 class="mb-4" style="text-align: center;font-size: 50px">국내 및 해외에서 <br><span style="font-weight: bold;">모두 인정받은 써밋수학</span></h2>
+ 						<p class="mb-4" style="text-align: center;">2013년부터 미국의 공립/사립/차터 학교들을 대상으로 성공적으로 스마트 스쿨수학 제품을<br>서비스해오고 있으며,다양한 분야의 수상실적을 통해 우수성을 입증하고 있습니다.</p>
+ 					</div>
+ 				</div>
  			</div>
-
- 			<div class="btn btn-primary d-flex justify-content-center align-items-center mr-2" style="width: 200px;height: 50px;">text</div>
- 			<div class="btn btn-info d-flex justify-content-center align-items-center mb-3" style="width: 200px;height: 50px;">text</div>
-
-			<div class="col-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta distinctio perspiciatis ad voluptates obcaecati in numquam facere eos, consequuntur nihil neque suscipit quasi nulla cum corporis, non, tempore labore, minus magnam placeat maxime rem? Provident hic ea nobis nam porro possimus facere quae eligendi, veritatis fugit modi minima iusto doloribus minus error ut totam iste commodi ipsam deserunt libero dolor? Quis tempora totam aspernatur iste qui, voluptatem optio rerum nostrum necessitatibus aliquid sunt excepturi eaque quidem quo sapiente dolorem ea velit porro! Repudiandae maxime sint eligendi. Consequatur porro, neque ipsam distinctio fugit rem soluta quis natus ducimus hic architecto cum at labore laborum incidunt laudantium assumenda dolores ab accusamus, nostrum optio magni sequi quasi. Facere temporibus aspernatur, animi qui esse quos, neque delectus laboriosam? Enim porro, accusantium dolor officia, alias et necessitatibus natus voluptatum, debitis nam cumque officiis dolorem doloremque quasi esse eum animi deleniti. Quisquam numquam molestiae praesentium expedita quis tenetur sed tempore eveniet delectus reprehenderit, cumque, deleniti optio fugit doloremque reiciendis ex harum beatae perferendis maxime! Quisquam ea maxime repellat perferendis voluptatum corporis! Amet ipsam, reprehenderit culpa animi possimus nam dolorum laboriosam magni non obcaecati nobis, fugiat alias commodi atque provident. Quidem quasi eaque voluptatem eius suscipit laudantium dicta nisi illum laboriosam consequatur fugiat pariatur sunt voluptas dolore excepturi quia, rerum id odio harum, voluptatum unde veniam ipsam minima! Nihil, blanditiis architecto pariatur distinctio cupiditate minima harum autem error ut qui sint temporibus quae quas ea repellat itaque repellendus ad ullam. Nam nisi maxime repellat ut perferendis praesentium eos deserunt, sit ea aliquam suscipit minima cumque consectetur laboriosam et. Recusandae, debitis officiis? Commodi, maiores ipsa nisi eligendi dolor eius neque voluptatem. Eveniet voluptatem totam repellendus consequuntur praesentium. Culpa ipsum, deserunt consectetur aspernatur iste repellendus recusandae saepe! Est quia asperiores, facilis molestias illum! Iste veritatis unde blanditiis, vel nisi?</p>	
-			</div>
-
-			
-		
- 	    </div>
-     </div>
+ 					<div class="row">
+ 						<div class="col-md-4 bg-primary d-flex" style="border-right: 2px solid #fff;">
+ 							<div class="m-auto text-center">
+ 								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c1"></span>개</p>
+ 								<p style="font-size: 19px;">한국 공교육 학교</p>
+ 							</div>
+ 						</div>
+ 						<div class="col-md-4 bg-info d-flex" style="border-right: 2px solid #fff;">
+ 							<div class="m-auto text-center">
+ 								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c2"></span>개</p>
+ 								<p style="font-size: 19px;">미국 공교육 학교</p>
+ 							</div>
+ 						</div>
+ 						<div class="col-md-4 bg-warning d-flex">
+ 							<div class="m-auto text-center">
+ 								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c3"></span>명</p>
+ 								<p style="font-size: 19px;">써밋리그 참가(연가)</p>
+ 							</div>
+ 						</div>
+ 					</div>
+	</div>
+ 			
+    
  </section>
 
 
 
  <!-- footer -->
  <footer class="bg-info">
- 	<p class="text-white d-flex justify-content-center align-items-center" style="line-height: 200px;margin-bottom: 0">footer</p>
+ 	<p class="text-white d-flex justify-content-center align-items-center" style="margin-bottom: 0;" >footer</p>
  </footer>
 
  <div class="top">top</div>
