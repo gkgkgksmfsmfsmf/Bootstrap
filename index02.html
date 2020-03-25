@@ -77,6 +77,10 @@
 
 	<script>
 		$(function(){
+
+
+				
+
 				$(window).scroll(function(){
 						$(".menu-top").addClass("fixed-top");
 						$(document).mousewheel(function(event,delta){
@@ -87,7 +91,47 @@
 						}
 						});
 						
-						
+						var offsetTop = $(".oT").offset().top;
+						var windowTop = $(window).scrollTop();
+						console.log(offsetTop);
+
+						if(windowTop>=offsetTop-600){
+
+							var count1=0;
+							var count2=0;
+							var count3=0;
+							
+
+							function cnum1(){
+								if(count1<10){
+									//count = count+10;
+									count1++;
+								}
+									$(".c1").text(count1);
+							}
+
+							var num1 = setInterval(cnum1,50);
+							var num2 = setInterval(cnum2,50);
+							var num3 = setInterval(cnum3,50);
+
+
+							function cnum2(){
+								if(count2<160){
+									//count = count+10;
+									count2=count2+8;
+								}
+									$(".c2").text(count2);
+							}
+							function cnum3(){
+								if(count3<90000){
+									count3 = count3+3000;
+									
+								}
+									$(".c3").text(count3);
+							}
+
+						}
+
 				});
 		
 				var mySlide = $(".slide").bxSlider({});
@@ -102,39 +146,11 @@
 					$("html,body").animate({scrollTop:0},500);
 				});
 
-			var count1=0;
-			var count2=0;
-			var count3=0;
-
-			function cnum1(){
-				if(count1<10){
-					//count = count+10;
-					count1++;
-				}
-					$(".c1").text(count1);
-			}
-		
-			var num1 = setInterval(cnum1,50);
-			var num2 = setInterval(cnum2,50);
-			var num3 = setInterval(cnum3,50);
-
-
-			function cnum2(){
-				if(count2<160){
-					//count = count+10;
-					count2=count2+8;
-				}
-					$(".c2").text(count2);
-			}
-			function cnum3(){
-				if(count3<90000){
-					count3 = count3+3000;
-					
-				}
-					$(".c3").text(count3);
-			}
+			
 
 			
+
+
 		
 		
 
@@ -178,7 +194,7 @@
 	</div>
 </div>
  <!-- section_1 -->
- <section class="bg-light"> <!-- slideBg -->
+ <section class="bg-light py-5"> <!-- slideBg -->
  	<div class="container" style="_height: 800px;padding-top:100px;">
  		<div class="row">
  			<div class="col-12">
@@ -263,38 +279,26 @@
 
 	 			</div>
 
-	 			<div class="col-md-12 bg-white text-center mb-5 rounded-lg px-0" style="_height: 600px;">
+	 			<div class="col-md-12 bg-white text-center  rounded-lg px-0" style="_height: 600px;">
 
-	 				<h2 class="col-12 py-3 bg-primary text-white mb-4 rounded-top" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
+	 				<h2 class="col-12 py-3 mb-0 bg-primary text-white rounded-top" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
 
-	 				
-	 					<div class="row col-12 p-0 m-0">
-	 						<div class="col-4">
-	 							<img src="images/student.png" alt="">
-	 						</div>
-	 						<div class="col-8 bg-primary">
-				    	 	<div class="img_text">
-					        <p>동영상 강의와 문제풀이를<br> 테블릿으로 학습하고 , 개념노트로 예.복습을 합니다.</p>
-					    	</div>
-					    </div>
-
-							<div class="col-8 bg-primary">
-								<div class="img_text">
-					        <p>선생님은 학생의 학습과정을 실시간 모니터링하면서,<br> 학습 동기부여 및 코칭을 합니다.</p>
-						    </div>
-							</div>
-							<div class="col-4">
-								<img src="images/student.png" alt="">
-							</div>
-				
-				    	
-				    		<div class="col-3 bg-warning">1</div>
-				    		<div class="col-3 bg-warning">2</div>
-				    		<div class="col-3 bg-warning">3</div>
-				    		<div class="col-3 bg-warning">4</div>
-				    
-
-				    </div>
+	 				<div class="row py-3">
+	 					<div class="col-6 col-md-5 px-2 px-md-5">
+	 						<img src="images/student.png" alt="" class="mb-3">
+	 						<p>동영상 강의와 문제풀이를 태블릿으로 학습하고,<br>개념노트로 예.복습을 합니다.</p>
+	 						<img src="images/book.png" alt="" class="w-100 ">
+	 					</div>
+	 					<div class=" col-md-2 align-items-center d-none d-md-flex justify-content-center">
+	 						<img src="images/plus.png" alt="">
+	 					</div>
+	 					<div class="col-6 col-md-5 px-2 px-md-5">
+	 						<img src="images/student.png" alt="" class="mb-3 p">
+	 						<p>선생님은 학생의 학습과정을 실시간 모니터링하면서,<br>학습 동기부여 및 코칭을 합니다.</p>
+	 						<img src="images/book.png" alt="" class="w-100">
+	 					</div>
+	 				</div>
+	 					
 	 				
 						
 			
@@ -337,7 +341,7 @@
  <!-- section_4 -->
  <section class="bg-success d-flex" style="height: 700px;">
  	<div class="container text-white m-auto">
- 			<div class="row">
+ 			<div class="row oT">
  				<div class="col-12 bg-success d-flex">
  					<div class="tw m-auto">
  						<h2 class="mb-4" style="text-align: center;font-size: 50px">국내 및 해외에서 <br><span style="font-weight: bold;">모두 인정받은 써밋수학</span></h2>
@@ -373,7 +377,7 @@
 
 
  <!-- footer -->
- <footer class="bg-dark" style="height: 100px;">
+ <footer class="bg-dark">
  	<p class="text-white d-flex justify-content-center align-items-center" style="margin-bottom: 0;" >footer</p>
  </footer>
 
