@@ -63,6 +63,26 @@
 			background-size: cover;
 		}
 		
+		.BG{
+			background-image: url(images/bg_state.png);
+			background-repeat: no-repeat;
+			background-size: cover; 
+		}
+
+		.rgba{background-color:rgba(0,0,0,0.4);}
+		.rgbaW{background-color:rgba(255,255,255,0.5);}
+		.rgbaB{background-color: rgba(0,0,225,0.2);}
+		.rgbaY{background-color:rgba(41,75,113,0.4);}
+		.rgbaC{background-color:rgba(19,124,160,0.3);}
+
+
+		.fixed-top{}
+
+/*		.BGI{
+			background-image: url(images/bg_visual.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}*/
 
 		/*.oone p{width: 300px;height: 50px;background-color: white;line-height: 50px;}*/
         /*.pWrap02{width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 18%;}*/
@@ -78,7 +98,12 @@
 	<script>
 		$(function(){
 
-
+				var count1 = 0;
+				var num1 =0;
+				var count2 = 0;
+				var num2 =0;
+				var count3 = 0;
+				var num3 =0;
 				
 
 				$(window).scroll(function(){
@@ -90,47 +115,61 @@
 							$(".top").removeClass("addtop");
 						}
 						});
-						
+
+
+						var sTop = $(this).scrollTop();
 						var offsetTop = $(".oT").offset().top;
-						var windowTop = $(window).scrollTop();
-						console.log(offsetTop);
+						console.log("111,"+sTop);
 
-						if(windowTop>=offsetTop-600){
+						if(sTop >= offsetTop-1000){
+								if(num1 == 0){
+									count1 = 0;
+									count2 = 0;
+									count3 = 0;
+									num1 = setInterval(cnum1,50);
+									num2 = setInterval(cnum2,50);
+									num3 = setInterval(cnum3,50);
+								}
+							
+							}else{
+							
+								$(".c1").text("0");
+								$(".c2").text("0");
+								$(".c3").text("0");
 
-							var count1=0;
-							var count2=0;
-							var count3=0;
+								if(num1 != 0){
+									clearInterval(num1);
+									clearInterval(num2);
+									clearInterval(num3);
+									num1 = 0;
+								}
+
 							
 
+						}
+					
+							
 							function cnum1(){
-								if(count1<10){
-									//count = count+10;
-									count1++;
-								}
+									if(count1<10){
+										count1 ++;
+									}
 									$(".c1").text(count1);
 							}
 
-							var num1 = setInterval(cnum1,50);
-							var num2 = setInterval(cnum2,50);
-							var num3 = setInterval(cnum3,50);
-
-
 							function cnum2(){
-								if(count2<160){
-									//count = count+10;
-									count2=count2+8;
-								}
+									if(count2<160){
+										count2 = count2+10;
+									}
 									$(".c2").text(count2);
 							}
-							function cnum3(){
-								if(count3<90000){
-									count3 = count3+3000;
-									
-								}
-									$(".c3").text(count3);
-							}
 
-						}
+							function cnum3(){
+									if(count3<90000){
+										count3 = count3+3000;
+									}
+									$(".c3").text(count3);
+								}
+									
 
 				});
 		
@@ -194,12 +233,12 @@
 	</div>
 </div>
  <!-- section_1 -->
- <section class="bg-light py-5"> <!-- slideBg -->
+ <section class="bg-light py-5 BGI"> <!-- slideBg -->
  	<div class="container" style="_height: 800px;padding-top:100px;">
  		<div class="row">
  			<div class="col-12">
  					<ul class="slide">
- 						<li><img src="images/slide_img01.png" alt=""></li>
+ 						<li><img src="images/bg-top.jpg" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  					</ul>
@@ -212,63 +251,67 @@
  <section class="bgImg py-3">
  	<div class="container py-5">
  		<div class="row">
-
  			<div class="col-12">
- 				<span class="font-weight-bold mr-2 text-white" style="font-size:50px">why</span>
+ 				<span class="font-weight-bold mr-2 text-white textline" style="font-size:50px; position: relative;">why</span>
  				<h2 class="pb-2 text-white">왜 써밋으로 공부해야 할까요?</h2>
+ 				<!-- <style>.textline:after{
+ 				display: block;content:"";
+ 				 			width: 300%;height: 3px;
+ 				 			background-color: #ff0;
+ 				 		position: absolute;
+ 				 		top: 65%; left: 100%;
+ 				 	}
+ 				 	</style> -->
  			</div>
+ 			<h2 class="col-12 py-3 rgba text-white mb-0 rounded-top text-center" style="font-size: 23px;padding-top: 25px;">01 / 초등부터 고등까지 빈틈없이 실력을 채워주는 커리큘럼</h2>
 
- 			<div class="col-md-12 bg-white text-center pb-4 mb-5 rounded-lg px-0" style="_height: 600px;position: relative;">
-
-				<h2 class="col-12 py-3 bg-primary text-white mb-4 rounded-top" style="font-size: 23px;padding-top: 25px;">01 / 초등부터 고등까지 빈틈없이 실력을 채워주는 커리큘럼</h2>
+ 			<div class="col-md-12 rgbaW text-center pb-4 mb-5 rounded-lg px-0" style="_height: 600px;position: relative;">
 				
 					<div class="row px-4">
 						<div class="col-md-4 px-4">
-							<p class="col-md-12 text-primary font-weight-bold py-2 mb-md-0 mb-3">초등수학</p>
-							<p class="d-md-block d-none bg-info mb-2 py-2 rounded-lg">9,50,100까지의 수</p>
-							<p class="d-md-block d-none bg-info mb-2 py-2 rounded-lg">덧셈과 뺄셈</p>
-							<p class="d-md-block d-none bg-info mb-2 py-2 rounded-lg">곱셈,곱셈구구</p>
-							<p class="d-md-block d-none bg-info mb-2 py-2 rounded-lg">약수와 배수,약분과 통분</p>
+							<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0  rgbaW mt-4 rounded-top">초등수학</p>
+							<p class="rgbaB mb-2 py-2 rounded-lg text-white">9,50,100까지의 수</p>
+							<p class="rgbaB mb-2 py-2 rounded-lg text-white">덧셈과 뺄셈</p>
+							<p class="rgbaB mb-2 py-2 rounded-lg text-white">곱셈,곱셈구구</p>
+							<p class="rgbaB mb-2 py-2 rounded-lg text-white">약수와 배수,약분과 통분</p>
 						</div>
 						
 						<div class="col-md-4 px-4">
-							<p class="col-md-12 text-primary font-weight-bold py-2 mb-md-0 mb-3 ">중등수학</p>
-		          <p class="d-md-block d-none bg-success mb-2 py-2 rounded-lg">소인수분해 최대공약수와 최소공배수</p>
-		          <p class="d-md-block d-none bg-success mb-2 py-2 rounded-lg">정수와 유리수</p>
-		          <p class="d-md-block d-none bg-success mb-2 py-2 rounded-lg">유리수와 순환소수</p>
-		          <p class="d-md-block d-none bg-success mb-2 py-2 rounded-lg">제곱근과 실수</p>
+							<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0 rgbaW mt-4 rounded-top">중등수학</p>
+		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">소인수분해 최대공약수와 최소공배수</p>
+		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">정수와 유리수</p>
+		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">유리수와 순환소수</p>
+		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">제곱근과 실수</p>
 						</div>
 						
 						<div class="col-md-4 px-4">
-							<p class="col-md-12 text-primary font-weight-bold py-2 mb-md-0 mb-3">고등수학</p>
-		          <p class="d-md-block d-none bg-danger py-2 rounded-lg">지수,로그(수학I)</p>
+							<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0 rgbaW mt-4 rounded-top">고등수학</p>
+		          <p class="rgbaC py-2 rounded-lg text-white">지수,로그(수학I)</p>
 						</div>
 					</div>
 
 				
  			</div>
 
-	 			<div class="col-md-12 bg-white text-center pb-4 mb-5 rounded-lg px-0" style="_height: 600px;position: relative">
-
-	 			    <h2 class="col-12 py-3 bg-primary text-white mb-4 rounded-top" style="font-size: 23px;padding-top: 25px;">02 / AI분석으로 학습자만을 위한 초개인화 수학 학습</h2>
-
+				<h2 class="col-12 py-3 rgba text-white rounded-top mb-0 text-center" style="font-size: 23px;padding-top: 25px;">02 / AI분석으로 학습자만을 위한 초개인화 수학 학습</h2>
+	 			<div class="col-md-12 rgbaW text-center py-5 pb-4 mb-5 rounded-lg px-0" style="_height: 600px;position: relative">
              	<div class="row">
 
-             		<div class="col-4">
+             		<div class="col-md-4 col-12">
              			<div class="col-12 mb-2">
              				<img src="images/icon.png" alt="">
              			</div>
 	 			 				    <p class="col-12">학생이 문제를 풀때마다<br> 특허받은 AI알고리즘으로 취약부분 분석</p>
              		</div>
 
- 			 				    <div class="col-4">
+ 			 				    <div class="col-md-4 col-12">
  			 				    	<div class="col-12 mb-2">
  			 				    		<img src="images/icon.png" alt="">
  			 				    	</div>
  			 				    	<p class="col-12">학생의 축적된 데이터로<br> 실력 향상에 꼭 필요한 문제만 제시</p>
  			 				    </div>
 
- 			 				    <div class="col-4">
+ 			 				    <div class="col-md-4 col-12">
  			 				    	<div class="col-12 mb-2">
  			 				    		<img src="images/icon.png" alt="">
  			 				    	</div>
@@ -279,23 +322,34 @@
 
 	 			</div>
 
-	 			<div class="col-md-12 bg-white text-center  rounded-lg px-0" style="_height: 600px;">
-
-	 				<h2 class="col-12 py-3 mb-0 bg-primary text-white rounded-top" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
+				<h2 class="col-12 py-3 mb-0 rgba text-white rounded-top text-center" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
+	 			<div class="col-md-12 rgbaW text-center  rounded-lg px-0" style="_height: 600px;">
 
 	 				<div class="row py-3">
-	 					<div class="col-6 col-md-5 px-2 px-md-5">
+	 					<div class="col-12 col-md-5 px-md-5">
 	 						<img src="images/student.png" alt="" class="mb-3">
 	 						<p>동영상 강의와 문제풀이를 태블릿으로 학습하고,<br>개념노트로 예.복습을 합니다.</p>
-	 						<img src="images/book.png" alt="" class="w-100 ">
+	 						<img src="images/book.png" alt="" class="w-100 d-none d-md-block px-4">
+	 						<div class="col-md-6">AI 수학학습</div>	
+	 						<div class="col-md-6">스코어 개념노트</div>	
+	 						<div class="d-flex mb-3">
+	 							<div class="m-auto">
+	 								<img src="images/book.png" alt="" class="d-md-none d-block">
+	 							</div>
+	 						</div>
 	 					</div>
 	 					<div class=" col-md-2 align-items-center d-none d-md-flex justify-content-center">
 	 						<img src="images/plus.png" alt="">
 	 					</div>
-	 					<div class="col-6 col-md-5 px-2 px-md-5">
-	 						<img src="images/student.png" alt="" class="mb-3 p">
+	 					<div class="col-12 col-md-5 px-md-5">
+	 						<img src="images/student.png" alt="" class="mb-3">
 	 						<p>선생님은 학생의 학습과정을 실시간 모니터링하면서,<br>학습 동기부여 및 코칭을 합니다.</p>
-	 						<img src="images/book.png" alt="" class="w-100">
+	 						<img src="images/book01.png" alt="" class="w-100 d-none d-md-block px-4">
+	 						<div class="d-flex">
+	 							<div class="m-auto">
+	 								<img src="images/book01.png" alt="" class="d-md-none d-block">
+	 							</div>
+	 						</div>
 	 					</div>
 	 				</div>
 	 					
@@ -313,7 +367,7 @@
  </section>
 		
 <!-- section_3	 -->
-<section class="bg-info py-5">
+<section class="py-5">
  	<div class="container">
  		<div class="row">
  			<div class="col-12">
@@ -339,10 +393,10 @@
  	</div>
  </section>
  <!-- section_4 -->
- <section class="bg-success d-flex" style="height: 700px;">
+ <section class="BG d-flex py-5" style="height: 700px;">
  	<div class="container text-white m-auto">
  			<div class="row oT">
- 				<div class="col-12 bg-success d-flex">
+ 				<div class="col-12 d-flex">
  					<div class="tw m-auto">
  						<h2 class="mb-4" style="text-align: center;font-size: 50px">국내 및 해외에서 <br><span style="font-weight: bold;">모두 인정받은 써밋수학</span></h2>
  						<p class="mb-4" style="text-align: center;">2013년부터 미국의 공립/사립/차터 학교들을 대상으로 성공적으로 스마트 스쿨수학 제품을<br>서비스해오고 있으며,다양한 분야의 수상실적을 통해 우수성을 입증하고 있습니다.</p>
@@ -350,19 +404,19 @@
  				</div>
  			</div>
  					<div class="row">
- 						<div class="col-md-4 bg-primary d-flex" style="border-right: 2px solid #fff;">
+ 						<div class="col-md-4 d-flex" style="border-right: 2px solid #fff;">
  							<div class="m-auto text-center">
  								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c1"></span>개</p>
  								<p style="font-size: 19px;">한국 공교육 학교</p>
  							</div>
  						</div>
- 						<div class="col-md-4 bg-info d-flex" style="border-right: 2px solid #fff;">
+ 						<div class="col-md-4 d-flex" style="border-right: 2px solid #fff;">
  							<div class="m-auto text-center">
  								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c2"></span>개</p>
  								<p style="font-size: 19px;">미국 공교육 학교</p>
  							</div>
  						</div>
- 						<div class="col-md-4 bg-warning d-flex">
+ 						<div class="col-md-4 d-flex">
  							<div class="m-auto text-center">
  								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c3"></span>명</p>
  								<p style="font-size: 19px;">써밋리그 참가(연가)</p>
