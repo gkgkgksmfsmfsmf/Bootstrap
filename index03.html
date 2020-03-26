@@ -94,8 +94,20 @@
 			to{transform: translateY(-20px);}
 		}
 
-	
-	.ani{
+/*
+		.textline:after{
+ 				display: block;content:"";
+	 			_width:1000px;height:6px;
+	 			background-color: #fff;
+		 		position: absolute;
+		 		top: 65%; left: 120%;
+		 		animation-name: box1;
+				animation-duration: 3s;	
+				animation-fill-mode: forwards;
+ 				 	}
+*/
+
+		.ani{
 			height:6px;
 			opacity: 0;
 		}
@@ -118,8 +130,7 @@
 			from{width: 0;}
 			to{width: 100%;opacity: 1}
 		}
-		
-		
+
 
 	</style>
 
@@ -133,6 +144,7 @@
 				var count3 = 0;
 				var num3 =0;
 				
+				
 
 				$(window).scroll(function(){
 						$(".menu-top").addClass("fixed-top");
@@ -143,6 +155,7 @@
 							$(".top").removeClass("addtop");
 						}
 						});
+
 
 
 						var sTop = $(this).scrollTop();
@@ -179,6 +192,7 @@
 
 						}
 
+
 						if(sTop>why-500){
 						$(".ani").addClass("Ani");
 						}else{
@@ -191,7 +205,6 @@
 							$(".ani01").removeClass("Ani");
 						}
 
-					
 							
 							function cnum1(){
 									if(count1<10){
@@ -213,6 +226,9 @@
 									}
 									$(".c3").text(count3);
 								}
+
+
+
 									
 
 				});
@@ -277,7 +293,7 @@
 	</div>
 </div>
  <!-- section_1 -->
- <section class="bg-light py-5 BGI"> <!-- slideBg -->
+ <section class="bg-light py-5 BGI "> <!-- slideBg -->
  	<div class="container" style="_height: 800px;padding-top:100px;">
  		<div class="row">
  			<div class="col-12">
@@ -292,144 +308,157 @@
  </section>
 
  <!-- section_2 -->
+
  <section class="bgImg py-3">
  	<div class="container py-5 why">
-
-		<div class="row">
- 			<div class="col-2 font-weight-bold text-white d-flex">
- 				<p class="align-items-center" style="font-size: 50px;">WHY</p>
+ 		<div class="row">
+ 			<div class="col-2 font-weight-bold text-white px-0 d-flex">
+ 				<p class="align-items-center">WHY</p>
  			</div>
- 			<div class="col-10 d-flex">
+ 			<div class="col-10 d-flex px-0">
  				<div class="bg-white w-100 m-auto ani"></div>
  			</div>
  		</div>
-
-			 <h2 class="pb-2 text-white">왜 써밋으로 공부해야 할까요?</h2>
-
-
- 				<h2 class="col-12 py-3 rgba text-white mb-0 rounded-top text-center" style="font-size: 23px;padding-top: 25px;">01 / 초등부터 고등까지 빈틈없이 실력을 채워주는 커리큘럼</h2>
- 			
-
- 			<div class="col-md-12 rgbaW text-center pb-4 mb-5 rounded-lg px-0" style="_height: 600px;position: relative;">
-				
-					<div class="row px-4">
-						<div class="col-md-4 px-4">
-							<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0  rgbaW mt-4 rounded-top">초등수학</p>
-							<p class="rgbaB mb-2 py-2 rounded-lg text-white">9,50,100까지의 수</p>
-							<p class="rgbaB mb-2 py-2 rounded-lg text-white">덧셈과 뺄셈</p>
-							<p class="rgbaB mb-2 py-2 rounded-lg text-white">곱셈,곱셈구구</p>
-							<p class="rgbaB mb-2 py-2 rounded-lg text-white">약수와 배수,약분과 통분</p>
-						</div>
-						
-						<div class="col-md-4 px-4">
-							<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0 rgbaW mt-4 rounded-top">중등수학</p>
-		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">소인수분해 최대공약수와 최소공배수</p>
-		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">정수와 유리수</p>
-		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">유리수와 순환소수</p>
-		          <p class="rgbaY mb-2 py-2 rounded-lg text-white">제곱근과 실수</p>
-						</div>
-						
-						<div class="col-md-4 px-4">
-							<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0 rgbaW mt-4 rounded-top">고등수학</p>
-		          <p class="rgbaC py-2 rounded-lg text-white">지수,로그(수학I)</p>
-						</div>
-					</div>
-
-				
+ 		<div class="row">
+ 			<div class="col-12 px-0">
+ 				 <h2 class="pb-2 text-white">왜 써밋으로 공부해야 할까요?</h2>
  			</div>
+ 		</div>
+
+ 		
+ 		<div class="row">
+ 			<h2 class="py-3 rgba text-white mb-0 rounded-top text-center" style="font-size: 23px;padding-top: 25px;">01 / 초등부터 고등까지 빈틈없이 실력을 채워주는 커리큘럼</h2>
+ 		</div>
+ 		<div class="row rgbaW px-5">
+								<div class="col-md-4 px-4">
+									<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0  rgbaW mt-4 rounded-top">초등수학</p>
+									<p class="rgbaB mb-2 py-2 rounded-lg text-white">9,50,100까지의 수</p>
+									<p class="rgbaB mb-2 py-2 rounded-lg text-white">덧셈과 뺄셈</p>
+									<p class="rgbaB mb-2 py-2 rounded-lg text-white">곱셈,곱셈구구</p>
+									<p class="rgbaB mb-2 py-2 rounded-lg text-white">약수와 배수,약분과 통분</p>
+								</div>
+								
+								<div class="col-md-4 px-4">
+									<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0 rgbaW mt-4 rounded-top">중등수학</p>
+									          <p class="rgbaY mb-2 py-2 rounded-lg text-white">소인수분해 최대공약수와 최소공배수</p>
+									          <p class="rgbaY mb-2 py-2 rounded-lg text-white">정수와 유리수</p>
+									          <p class="rgbaY mb-2 py-2 rounded-lg text-white">유리수와 순환소수</p>
+									          <p class="rgbaY mb-2 py-2 rounded-lg text-white">제곱근과 실수</p>
+								</div>
+								
+								<div class="col-md-4 px-4">
+									<p class="col-md-12 text-darkgray font-weight-bold py-2 mb-0 rgbaW mt-4 rounded-top">고등수학</p>
+									          <p class="rgbaC py-2 rounded-lg text-white">지수,로그(수학I)</p>
+								</div>
+ 		</div>
+
+ 		<div class="row">
 
 				<h2 class="col-12 py-3 rgba text-white rounded-top mb-0 text-center" style="font-size: 23px;padding-top: 25px;">02 / AI분석으로 학습자만을 위한 초개인화 수학 학습</h2>
 
 	 			<div class="col-md-12 rgbaW text-center py-5 pb-4 mb-5 rounded-lg px-0" style="_height: 600px;position: relative">
-             	<div class="row px-4">
-
+             <div class="container">
+             		<div class="row">
+             	
              		<div class="col-md-4 col-12">
              			<div class="col-12 mb-4">
              				<img src="images/icon.png" alt="">
              			</div>
-	 			 				    <p class="col-12 rgbaW rounded-lg py-4">학생이 문제를 풀때마다<br> 특허받은 AI알고리즘으로 취약부분 분석</p>
-             		</div>
+		 				    <p class="col-12 rgbaW rounded-lg py-4">학생이 문제를 풀때마다<br> 특허받은 AI알고리즘으로 취약부분 분석</p>
+								</div>
+             	
+		 				    <div class="col-md-4 col-12">
+		 				    	<div class="col-12 mb-4">
+		 				    		<img src="images/icon.png" alt="">
+		 				    	</div>
+		 				    	<p class="col-12 rgbaW rounded-lg py-4">학생의 축적된 데이터로<br> 실력 향상에 꼭 필요한 문제만 제시</p>
+		 				    </div>
 
- 			 				    <div class="col-md-4 col-12">
- 			 				    	<div class="col-12 mb-4">
- 			 				    		<img src="images/icon.png" alt="">
- 			 				    	</div>
- 			 				    	<p class="col-12 rgbaW rounded-lg py-4">학생의 축적된 데이터로<br> 실력 향상에 꼭 필요한 문제만 제시</p>
- 			 				    </div>
-
- 			 				    <div class="col-md-4 col-12">
- 			 				    	<div class="col-12 mb-4">
- 			 				    		<img src="images/icon.png" alt="">
- 			 				    	</div>
- 			 				    	<p class="col-12 rgbaW rounded-lg py-4">딥러닝을 통한 정확한<br> 분석과 진단으로 철저히 개인화된 학습</p>
- 			 				    </div>
-
+		 				    <div class="col-md-4 col-12">
+		 				    	<div class="col-12 mb-4">
+		 				    		<img src="images/icon.png" alt="">
+		 				    	</div>
+		 				    	<p class="col-12 rgbaW rounded-lg py-4">딥러닝을 통한 정확한<br> 분석과 진단으로 철저히 개인화된 학습</p>
+		 				    </div>
+             	
              	</div>
-
+             </div>
 	 			</div>
 
-				<h2 class="col-12 py-3 mb-0 rgba text-white rounded-top text-center" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
-
-	 			<div class="col-md-12 rgbaW text-center rounded-lg px-0" style="_height: 600px;">
-
-	 				<div class="row py-3">
-	 					<div class="col-12 col-md-5 px-md-5">
-	 						<img src="images/student.png" alt="" class="mb-3">
-	 						<p>동영상 강의와 문제풀이를 태블릿으로 학습하고,<br>개념노트로 예.복습을 합니다.</p>
-	 						<img src="images/book.png" alt="" class="w-100 d-none d-md-block px-4">
-	 						<div class="d-flex mb-3">
-	 							<div class="m-auto">
-	 								<img src="images/book.png" alt="" class="d-md-none d-block">
+				<h2 class="col-12 py-3 rgba text-white rounded-top mb-0 text-center" style="font-size: 23px;padding-top: 25px;">03 / AI뿐만 아니라 선생님이 관리해주는 휴먼 터치 학습</h2>
+	 			<div class="col-md-12 rgbaW text-center  rounded-lg px-0" style="_height: 600px;">
+					
+	 				<div class="container py-3">
+	 					<div class="row py-3">
+	 						<div class="col-12 col-md-5 px-md-5">
+	 							<img src="images/student.png" alt="" class="mb-3">
+	 							<p>동영상 강의와 문제풀이를 태블릿으로 학습하고,<br>개념노트로 예.복습을 합니다.</p>
+	 							<img src="images/book.png" alt="" class="w-100 d-none d-md-block px-4">
+	 							<div class="col-md-6">AI 수학학습</div>	
+	 							<div class="col-md-6">스코어 개념노트</div>	
+	 							<div class="d-flex mb-3">
+	 								<div class="m-auto">
+	 									<img src="images/book.png" alt="" class="d-md-none d-block">
+	 								</div>
+	 							</div>
+	 						</div>
+	 						<div class=" col-md-2 align-items-center d-none d-md-flex justify-content-center">
+	 							<img src="images/plus.png" alt="">
+	 						</div>
+	 						<div class="col-12 col-md-5 px-md-5">
+	 							<img src="images/student.png" alt="" class="mb-3">
+	 							<p>선생님은 학생의 학습과정을 실시간 모니터링하면서,<br>학습 동기부여 및 코칭을 합니다.</p>
+	 							<img src="images/book01.png" alt="" class="w-100 d-none d-md-block px-4">
+	 							<div class="d-flex">
+	 								<div class="m-auto">
+	 									<img src="images/book01.png" alt="" class="d-md-none d-block">
+	 								</div>
 	 							</div>
 	 						</div>
 	 					</div>
-	 					<div class=" col-md-2 align-items-center d-none d-md-flex justify-content-center">
-	 						<img src="images/plus.png" alt="">
-	 					</div>
-	 					<div class="col-12 col-md-5 px-md-5">
-	 						<img src="images/student.png" alt="" class="mb-3">
-	 						<p>선생님은 학생의 학습과정을 실시간 모니터링하면서,<br>학습 동기부여 및 코칭을 합니다.</p>
-	 						<img src="images/book01.png" alt="" class="w-100 d-none d-md-block px-4">
-	 						<div class="d-flex">
-	 							<div class="m-auto">
-	 								<img src="images/book01.png" alt="" class="d-md-none d-block">
-	 							</div>
-	 						</div>
-	 					</div>
-
 	 				</div>
-	 				
+			
 
-				</div>
+ 					</div>
 	 					
 	 					
-	 				
 	 			</div>
+
 	 		</div>
- 	</div>
  </section>
+
+
 		
 <!-- section_3	 -->
 <section class="py-5">
  	<div class="container how">
+ 		<!-- <div class="row">
+ 			<div class="col-12">
+ 				<span class="font-weight-bold mr-2" style="font-size:50px">HOW</span>
+ 				<h2 class="pb-2">초,중,고등수학을 기초 연산부터 내신까지 한번에!</x2>
+ 			</div> -->
 
- 		<div class="row">
- 			<div class="col-2 font-weight-bold text-dark px-0 d-flex">
- 				<p class="align-items-center" style="font-size:50px;">HOW</p>
- 			</div>
- 			<div class="col-10 d-flex px-0">
- 				<div style="height:6px;" class="bg-dark w-100 m-auto ani01"></div>
- 			</div>
- 		</div>
+				<div class="row">
+		 			<div class="col-2 font-weight-bold text-dark px-0 d-flex">
+		 				<p class="align-items-center" style="font-size:70px;">HOW</p>
+		 			</div>
+		 			<div class="col-10 d-flex px-0">
+		 				<div style="height:6px;" class="bg-dark w-100 m-auto ani01"></div>
+		 			</div>
+		 		</div>
+		 		<div class="row">
+		 			<div class="col-12 px-0">
+		 				 <h2 class="pb-2 text-white">초,중,고등수학을 기초 연산부터 내신까지 한번에!</h2>
+		 			</div>
+		 		</div>
 
-	 <h2 class="pb-2 text-white">초,중,고등수학을 기초 연산부터 내신까지 한번에!</h2>
-
-
- 			<div class="d-none d-md-block bg-light ">
- 				<img src="images/bootstrap-circle.png" alt="" class="w-100">
- 			</div>
- 			<div class="d-block d-md-none bg-light">
- 				<img src="images/bootstrap-circle01.png" alt="" class="w-100">
+ 			<div class="row">
+ 				<div class="d-none d-md-block bg-light ">
+ 					<img src="images/bootstrap-circle.png" alt="" class="w-100">
+ 				</div>
+ 				<div class="d-block d-md-none bg-light">
+ 					<img src="images/bootstrap-circle01.png" alt="" class="w-100">
+ 				</div>
  			</div>
 
  			<div class="row">
@@ -442,7 +471,7 @@
  			</div>
  			
  		</div>
- 	</div>
+ 	
  </section>
  <!-- section_4 -->
  <section class="BG d-flex py-5" style="height: 700px;">
@@ -491,3 +520,6 @@
 
 </body>
 </html>
+
+
+
