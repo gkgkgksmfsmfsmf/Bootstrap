@@ -78,16 +78,6 @@
 
 		.fixed-top{}
 
-/*		.BGI{
-			background-image: url(images/bg_visual.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}*/
-
-		/*.oone p{width: 300px;height: 50px;background-color: white;line-height: 50px;}*/
-        /*.pWrap02{width: 300px;position: absolute;left: 50%;margin-left: -150px;top: 18%;}*/
-        /*.pWrap02 p{width: 300px;height: 80px;background-color: white;line-height: 40px;}*/
-     
 
 		@keyframes viewTop{
 			from{transform: translateY(0px);}
@@ -101,25 +91,32 @@
 		}
 		
 
-		.ani.Ani{
-			animation: flow 1s forwards;
-		}
+	.ani.Ani{
+		animation: flow 1s forwards;
+	}
 
-		.ani01{
-		height:6px;
-		opacity: 0
-		}
+	.ani01{
+	height:6px;
+	opacity: 0
+	}
+	
+
+	.ani01.Ani{
+		animation: flow 1s forwards;
+	}
+	@keyframes flow{
+		from{width: 0;}
+		to{width: 100%;opacity: 1}
+	}
+		
 		
 
-		.ani01.Ani{
-			animation: flow 1s forwards;
-		}
-		@keyframes flow{
-			from{width: 0;}
-			to{width: 100%;opacity: 1}
-		}
-		
-		
+
+	@media(max-width: 560px){
+		.BR{border-right: none !important;}
+	}
+
+	.BR{border-right: 1px solid #fff;}
 
 	</style>
 
@@ -248,7 +245,7 @@
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-white pr-0">
 		  
-		  <a class="navbar-brand text-white m-auto pl-4 pl-md-0" href="#!">
+		  <a class="navbar-brand text-white m-auto pl-4 pl-md-0" href="index02.html">
 		  	<img src="images/logo_summit.svg" alt="">
 		  </a>
 		<button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -257,19 +254,19 @@
 		  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 		    <ul class="navbar-nav ml-auto mt-2 mt-md-0">
 		      <li class="nav-item active font-weight-bold">
-		        <a class="nav-link " href="#!">써밋수학 스토리<span class="sr-only">(current)</span></a>
+		        <a class="nav-link " href="index02.html">써밋수학 스토리<span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link font-weight-bold" href="#!">써밋수학 프로그램</a>
+		        <a class="nav-link font-weight-bold" href="sub01.html">써밋수학 프로그램</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link font-weight-bold" href="#!">써밋수학 체험하기</a>
+		        <a class="nav-link font-weight-bold" href="sub02.html">써밋수학 체험하기</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link font-weight-bold" href="#!">스마트 학습관</a>
+		        <a class="nav-link font-weight-bold" href="sub03.html">스마트 학습관</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link font-weight-bold" href="#!">이벤트</a>
+		        <a class="nav-link font-weight-bold" href="sub04.html">이벤트</a>
 		      </li>
 		    </ul>
 		  </div>
@@ -445,8 +442,8 @@
  	</div>
  </section>
  <!-- section_4 -->
- <section class="BG d-flex py-5" style="height: 700px;">
- 	<div class="container text-white m-auto">
+ <section class="BG d-flex py-5" style="_height: 700px;">
+ 	<div class="container text-white m-auto py-5">
  			<div class="row oT">
  				<div class="col-12 d-flex">
  					<div class="tw m-auto">
@@ -456,19 +453,19 @@
  				</div>
  			</div>
  					<div class="row">
- 						<div class="col-md-4 d-flex" style="border-right: 2px solid #fff;">
+ 						<div class="col-md-4 d-flex BR" >
  							<div class="m-auto text-center">
  								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c1"></span>개</p>
  								<p style="font-size: 19px;">한국 공교육 학교</p>
  							</div>
  						</div>
- 						<div class="col-md-4 d-flex" style="border-right: 2px solid #fff;">
+ 						<div class="col-md-4 d-flex BR" >
  							<div class="m-auto text-center">
  								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c2"></span>개</p>
  								<p style="font-size: 19px;">미국 공교육 학교</p>
  							</div>
  						</div>
- 						<div class="col-md-4 d-flex">
+ 						<div class="col-md-4 d-flex BR">
  							<div class="m-auto text-center">
  								<p style="font-size: 50px;font-weight: bold;margin-bottom: 0"><span class="c3"></span>명</p>
  								<p style="font-size: 19px;">써밋리그 참가(연가)</p>
@@ -480,11 +477,38 @@
     
  </section>
 
+ <!-- section5 -->
+ <div class="container bg-light" style="height:10vh">
+ 	<div class="row">
+ 		
+ 	</div>
+ </div>
+
 
 
  <!-- footer -->
- <footer class="bg-dark">
- 	<p class="text-white d-flex justify-content-center align-items-center" style="margin-bottom: 0;" >footer</p>
+ <footer class="bg-dark py-4">
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col-md-6">
+ 				<div class="row">
+ 					<div class="col-md-5  text-center py-2">
+ 						<img src="images/footer.png" alt="">
+ 					</div>
+ 					<div class="col-md-7 d-flex">
+ 						<div class="m-auto">
+ 							<a href="#" class="text-white">개인정보처리방침</a>
+ 							<a href="#" class="text-white">이용약관</a>
+ 							<a href="#" class="text-white">회사소개</a>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			<div class="col-md-6  d-flex text-white">
+ 				<p class="m-auto">Copyright 2018 DAEKYO Co,LTD. All Rights Reserved.</p>
+ 			</div>
+ 		</div>
+ 	</div>
  </footer>
 
  <div class="top">top</div>
