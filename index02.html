@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -14,109 +15,7 @@
 	<script src="js/slick.min.js"></script>
 	<style>
 
-		.bx-wrapper {
-		    -moz-box-shadow: none;
-		    -webkit-box-shadow: none;
-		    box-shadow: none;
-		    border: 0 none;
-				margin-bottom: 0;}
-		/*.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
-		    position: absolute;
-		    bottom: 30px;
-		    width: 100%;
-		}*/
-
-		.slideBg{
-			background-image: url(images/slideBg.png);
-			background-repeat:no-repeat;
-			background-size: cover; 
-		}
-
-		.top{
-			position: fixed;
-			right: 50px;
-			bottom: 50px;
-			width: 60px;
-			height: 60px;
-			line-height: 60px;
-			border-radius: 50%;
-			background-color: #000;
-			color:white;
-			text-align: center;
-			cursor: pointer;
-			animation: viewTop 1s infinite alternate;
-			opacity: 0;
-			transition: 0.3s
-		}
-
-		.top.addtop{opacity: 1}
-
-		.single-item li img{width: 100%;}
-		.single-item{width: 100%;}
-
 		
-		.navbar-toggler{position: relative;z-index: 5}
-		
-		.bgImg{
-			background-image: url(images/bg_img.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		
-		.BG{
-			background-image: url(images/bg_state.png);
-			background-repeat: no-repeat;
-			background-size: cover; 
-		}
-
-		.rgba{background-color:rgba(0,0,0,0.4);}
-		.rgbaW{background-color:rgba(255,255,255,0.5);}
-		.rgbaB{background-color: rgba(0,0,225,0.2);}
-		.rgbaY{background-color:rgba(41,75,113,0.4);}
-		.rgbaC{background-color:rgba(19,124,160,0.3);}
-
-
-		.fixed-top{}
-
-
-		@keyframes viewTop{
-			from{transform: translateY(0px);}
-			to{transform: translateY(-20px);}
-		}
-
-	
-	.ani{
-			height:6px;
-			opacity: 0;
-		}
-		
-
-	.ani.Ani{
-		animation: flow 1s forwards;
-	}
-
-	.ani01{
-	height:6px;
-	opacity: 0
-	}
-	
-
-	.ani01.Ani{
-		animation: flow 1s forwards;
-	}
-	@keyframes flow{
-		from{width: 0;}
-		to{width: 100%;opacity: 1}
-	}
-		
-		
-
-
-	@media(max-width: 560px){
-		.BR{border-right: none !important;}
-	}
-
-	.BR{border-right: 1px solid #fff;}
 
 	</style>
 
@@ -279,7 +178,7 @@
  		<div class="row">
  			<div class="col-12">
  					<ul class="slide">
- 						<li><img src="images/bg-top.jpg" alt=""></li>
+ 						<li><img src="images/slide_img01.png" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  						<li><img src="images/slide_img01.png" alt=""></li>
  					</ul>
