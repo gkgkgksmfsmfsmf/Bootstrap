@@ -19,6 +19,7 @@
 	</style>
 	<script>
 		$(function(){
+				
 
 			 
 				$(document).mousewheel(function(event,delta){
@@ -28,34 +29,46 @@
 						}else{
 							$(".top").removeClass("addtop");
 						}
-						});
-
-				$(".top").click(function(){
-
-						$("html,body").animate({scrollTop:0},500);
-					});
-
-
+				});
 
 				$(window).scroll(function(){
 					 var st = $(window).scrollTop();
-				   var of = $(".submenu").offset().top;
-				   console.log(of);
+				  
 								if( st > 400 ){
 									$(".submenu").addClass("fixed-top");
 								}else{
 										$(".submenu").removeClass("fixed-top");
 								}
-						
+				});
 
-			});
+				$("#nav .nav-link").click(function() {
+        	var t = $(this).attr("href");
+        	console.log(t);
+        	$('.active').removeClass('active');
+	        $("html, body").animate({
+	            scrollTop: $(t).offset().top+20
+	        	}, {
+	            duration: 1e3,
+	        });
+
+        	$('body').scrollspy({ target: '#nav',offset: $(t).offset().top0 });
+        	$(this).addClass('active');
+        	return false;
+   			 });
+				
+				$('body').scrollspy({ target: '#nav',offset: 0 });
+
+				
 		});
 	</script>
+	<style>
+		#nav .nav-link.active{color:red;}
+	</style>
 	
 </head>		
 <body>
-<!-- nav -->
-<div class="bg-white menu-top" style="z-index: 100000">
+	<!-- nav -->
+	<div class="bg-white menu-top" style="z-index: 100000">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light bg-white pr-0">
 		  
@@ -86,64 +99,61 @@
 		  </div>
 		</nav>
 	</div>
-</div>
-
-<!-- section1 -->
-<section class="sub01_bg pt-5">
-	<div class="container pt-5">
-		<h2 class="text-white text-center font-weight-bold pt-5" style="font-size: 3vW;">나보다 내 실력을 더 잘 아는 AI학습!<br>써밋수학</h2>
-		<p class="text-white text-center font-weight-bold pt-3 pb-4">스피드 수학으로 수.연산 영역의 개념을 빠르게 완성하고,<br>스코어수학으로 학교 공부를 대비!</p>
 	</div>
-	<div class="container submenu">
-				<div class="row bg-white text-center py-3">
-					<div class="col-md-4" style="border-right: 1px solid lightgray;">
-						<a href="sub01.html" style="font-size: 18px;" >써밋 스피드수학</a>
-					</div>
-					<div class="col-md-4" style="border-right: 1px solid lightgray;">
-						<a href="sub01_01.html" style="font-size: 18px;" >써밋 스코어수학</a>
-					</div>
-					<div class="col-md-4">
-						<a href="sub01_02.html" style="font-size: 18px;" class="Aactive">특장점</a>
-					</div>
-				</div>
 
+	<!-- section1 -->
+	<section class="sub01_bg pt-5">
+	<div class="container pt-5">
+		<h2 class="text-white text-center font-weight-bold pt-5 pb-3 fontsize" style="font-size: 3vW;">나보다 내 실력을 더 잘 아는 AI학습!<br>써밋수학</h2>
+		<p class="text-white text-center font-weight-bold pt-3 pb-4 fontsize01" style="font-size: 18px">스피드 수학으로 수.연산 영역의 개념을 빠르게 완성하고,<br>스코어수학으로 학교 공부를 대비!</p>
+	</div>
+	<div class="container submenu bg-white" id="nav">
+      <div class="row text-center">
+      	<div class="col-md-4">
+      	    <a class="nav-link" href="#section1">1</a>
+      	</div>
+      	<div class="col-md-4">
+      	    <a class="nav-link" href="#section2">@mdo</a>
+      	</div>
+      	<div class="col-md-4">
+      	   <a class="nav-link" href="#section3">@mdo</a>
+      	</div>
+      </div>
 	</div>
 </section>
 
 <!-- section2 -->
+<div class="img01" id="section1">
+	<img src="images/sub01_01.png" alt="" class="d-none d-md-block w-100">
+	<img src="images/sub01_01_m.png" alt="" class="d-block d-md-none w-100">
+</div>
+<div class="img02"  id="section2">
+	<img src="images/sub01_02.png" alt="" class="d-none d-md-block w-100">
+	<img src="images/sub01_02_m.png" alt="" class="d-block d-md-none w-100">
+</div>
+<div class="img03" id="section3">
+	<img src="images/sub01_03.png" alt="" class="d-none d-md-block w-100">
+	<img src="images/sub01_03_m.png" alt="" class="d-block d-md-none w-100">
+</div>
 
- <section>
- 	<div class="container">
- 		<img src="images/sub01_img01.png" alt="" class="py-5 bg-white w-100">
- 	</div>
- </section>
+<!-- <div class="imgWrap">
+	<img src="images/sub01_01.png" alt="" class="img01">
+	<img src="images/sub01_02.png" alt="" class="img02">
+	<img src="images/sub01_03.png" alt="" class="img03">
+</div>
+
+
+
+
+<div class="imgWrap_m">
+	<img src="images/sub01_01_m.png" alt="" class="img01">
+	<img src="images/sub01_02_m.png" alt="" class="img02">
+	<img src="images/sub01_03_m.png" alt="" class="img03">
+</div> -->
+
+
 
  <div class="top">top</div>
-
-
- <footer class="bg-dark py-4">
- 	<div class="container">
- 		<div class="row">
- 			<div class="col-md-6">
- 				<div class="row">
- 					<div class="col-md-5  text-center py-2">
- 						<img src="images/footer.png" alt="">
- 					</div>
- 					<div class="col-md-7 d-flex">
- 						<div class="m-auto">
- 							<a href="#" class="text-white">개인정보처리방침</a>
- 							<a href="#" class="text-white">이용약관</a>
- 							<a href="#" class="text-white">회사소개</a>
- 						</div>
- 					</div>
- 				</div>
- 			</div>
- 			<div class="col-md-6  d-flex text-white">
- 				<p class="m-auto">Copyright 2018 DAEKYO Co,LTD. All Rights Reserved.</p>
- 			</div>
- 		</div>
- 	</div>
- </footer>
 
 </body>
 </html>

@@ -108,8 +108,13 @@
 
 	@media(max-width: 560px){
 		.BR{border-right: none !important;}
+
 		.imgWrap{display: none !important;}
 		.imgWrap_m{display: block !important;}
+
+		.fontsize{font-size: 27px !important;}
+		.fontsize01{font-size:15px !important;}
+
 
 	}
 
@@ -138,5 +143,5 @@
 
 	a.Mactive{color:red;font-weight: bold;}
 
-	.fontsize{font-size: }
-	.fontsize01{}
+	.fontsize{font-size:50px}
+	.fontsize01{font-size: 18px;}

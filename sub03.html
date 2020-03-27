@@ -13,6 +13,7 @@
 	<script src="js/jquery.mousewheel.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<style>
 	
@@ -38,17 +39,20 @@
 
 
 				$(window).scroll(function(){
-					 var st = $(window).scrollTop();
-				   var of = $(".submenu").offset().top;
-				   console.log(of);
-								if( st > 400 ){
-									$(".submenu").addClass("fixed-top");
-								}else{
-										$(".submenu").removeClass("fixed-top");
-								}
-						
+					
 
 			});
+
+
+			var mySlide01 = $(".slide").bxSlider({
+				pager:false
+			});
+
+
+
+				$(".nav-tabs a").click(function(){
+	    		$(this).tab('show');
+	  		});
 		});
 	</script>
 	
@@ -89,18 +93,98 @@
 </div>
 
 <!-- section1 -->
-<section class="sub01_bg py-5">
+<section class="sub01_bg py-5 mb-5">
 	<div class="container py-5">
-		<h2 class="text-white text-center font-weight-bold pt-5 pb-3" style="font-size: 3vW;">써밋수학을 학습할 수 있는<br>눈높이러닝센터와 예스클래스</h2>
-		<p class="text-white text-center font-weight-bold pt-3 pb-4" style="font-size: 18px">자기주도 학습태도를 길러주는 눈높이러닝센터와<br>학원보다 가까운 스마트한 학습공간 예스클래스를 찾아보세요!</p>
+		<h2 class="text-white text-center font-weight-bold pt-5 pb-3 fontsize">써밋수학을 학습할 수 있는<br>눈높이러닝센터와 예스클래스</h2>
+		<p class="text-white text-center font-weight-bold pt-3 pb-4 fontsize01">자기주도 학습태도를 길러주는 눈높이러닝센터와<br>학원보다 가까운 스마트한 학습공간 예스클래스를 찾아보세요!</p>
 	</div>
 	
 </section>
 
 <!-- section2 -->
+<!-- <section class="mt-5 bg-white py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-4 px-0 bg-info">
+				<a href="#" style="display: block;font-size: 20px" class="text-center bg-danger py-3">눈높이 러닝센터</a>
+				<a href="#" style="display: block;font-size: 20px" class="text-center bg-primary py-3">예스클래스</a>
+				<h2>눈높이러닝센터</h2>
+				<span style="display: block;" class="bg-dark">국내교육업계 최초의 공부역량 계발 시스템</span>
+				<p class="bg-light">눈높이 러닝센터는 스마트 학습공간으로<br>국내교육업계 최초의 공부역량 계발 시스템인 <눈높이성장판>을 통해<br>단기적 학습능력과 장기적인 공부 초능력을 길러줍니다.</p>
+			</div>
+			<div class="col-8 bg-primary px-0">
+				<div class="slide">
+					<img src="images/sub03_slide01.jpg" alt="">
+					<img src="images/sub03_slide02.jpg" alt="">
+				</div>
+			</div>
+					</div>
 
-<div style="height: 2000px;"></div>
+
+					
+	</div>
+</section> -->
+
+
+
+<section class="bg-white py-5">
+	<div class="container mt-3">
+	  <h2>스마트 학습관</h2>
+	  <br>
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs">
+	    <li class="nav-item">
+	      <a class="nav-link active" href="#home">눈높이 러닝센터</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#menu1">예스클래스</a>
+	    </li>
+	  </ul>
+	
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div id="home" class="container tab-pane active"><br>
+	     <img src="images/sub03_slide01.jpg" alt="" style="display: block;" class="w-100">
+	     <h2>눈높이러닝센터</h2>
+				<span style="display: block;">국내교육업계 최초의 공부역량 계발 시스템</span>
+				<p>눈높이 러닝센터는 스마트 학습공간으로<br>국내교육업계 최초의 공부역량 계발 시스템인 <눈높이성장판>을 통해<br>단기적 학습능력과 장기적인 공부 초능력을 길러줍니다.</p>
+	    </div>
+	    <div id="menu1" class="container tab-pane fade"><br>
+	      <img src="images/sub03_slide02.jpg" alt="" style="display: block;" class="w-100">
+	    </div>
+	  </div>
+	</div>
+</section>
+
+
+
+
  <div class="top">top</div>
+
+
+ <footer class="bg-dark py-4">
+ 	<div class="container">
+ 		<div class="row">
+ 			<div class="col-md-6">
+ 				<div class="row">
+ 					<div class="col-md-5  text-center py-2">
+ 						<img src="images/footer.png" alt="">
+ 					</div>
+ 					<div class="col-md-7 d-flex">
+ 						<div class="m-auto">
+ 							<a href="#" class="text-white">개인정보처리방침</a>
+ 							<a href="#" class="text-white">이용약관</a>
+ 							<a href="#" class="text-white">회사소개</a>
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 			<div class="col-md-6  d-flex text-white">
+ 				<p class="m-auto">Copyright 2018 DAEKYO Co,LTD. All Rights Reserved.</p>
+ 			</div>
+ 		</div>
+ 	</div>
+ </footer>
 
 </body>
 </html>
