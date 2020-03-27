@@ -15,51 +15,78 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/slick.min.js"></script>
 	<style>
-		.fixed{
-			position: fixed;
-			bottom: 0
-		}
+	
 	</style>
 	<script>
 		$(function(){
 
-			 // var st = $(window).scrollTop();
-		  //  var of = $(".subnav").offset().top;
-		  //  console.log(of);
-				
+				var img01 = $(".img01").offset().top;
+		   	var img02 = $(".img02").offset().top;
+		   	var img03 = $(".img03").offset().top;
 
-				$(window).scroll(function(){
-					 
-						// if(st>of){
-						// 	$(".submenu").addClass(".fixed");
-						// }
-						
-						$(document).mousewheel(function(event,delta){
+			 
+				$(document).mousewheel(function(event,delta){
 							if(delta<0){
+								console.log(delta);
 							$(".top").addClass("addtop");
 						}else{
 							$(".top").removeClass("addtop");
 						}
 						});
 
-						
+				$(".top").click(function(){
+
+						$("html,body").animate({scrollTop:0},500);
+					});
+
+				$(".speed").click(function(){
+						$("html,body").animate({scrollTop:img01},1000);
+					});
+
+				$(".score").click(function(){
+						$("html,body").animate({scrollTop:img02},1000);
+					});
+
+				$(".good").click(function(){
+						$("html,body").animate({scrollTop:img03},1000);
+					});
+
+				
 
 
-					$(".top").click(function(){
+				$(window).scroll(function(){
+					 var st = $(window).scrollTop();
+				   var of = $(".submenu").offset().top;
+				   var img01 = $(".img01").offset().top;
+				   var img02 = $(".img02").offset().top;
+				   var img03 = $(".img03").offset().top;
+				   console.log(img01+"/"+img02+"/"+img03);
+								if( st > 400 ){
+									$(".submenu").addClass("fixed-top");
+								}else{
+										$(".submenu").removeClass("fixed-top");
+								}
 
-					$("html,body").animate({scrollTop:0},500);
-				});
+								if(st>=img01){
+									$(".speed").addClass("Mactive");
+									$(".good").removeClass("Mactive");
+									$(".score").removeClass("Mactive");
+								}
 
-			
+								if(st>=img02){
+									$(".speed").removeClass("Mactive");
+									$(".score").addClass("Mactive");
+									$(".good").removeClass("Mactive");
+									
+								}
+								if(st>=img03){
+									$(".good").addClass("Mactive");
+									$(".score").removeClass("Mactive");
+									$(".speed").removeClass("Mactive");
+								}
+								
 
-			
-
-
-		
-		
-
-
-		});
+			});
 		});
 	</script>
 	
@@ -102,25 +129,56 @@
 <!-- section1 -->
 <section class="sub01_bg pt-5">
 	<div class="container pt-5">
-		<h2 class="text-white text-center font-weight-bold pt-5" style="font-size: 3vW;">나보다 내 실력을 더 잘 아는 AI학습!<br>써밋수학</h2>
-		<p class="text-white text-center font-weight-bold pt-3 pb-4">스피드 수학으로 수.연산 영역의 개념을 빠르게 완성하고,<br>스코어수학으로 학교 공부를 대비!</p>
-	
-				<div class="row bg-white text-center py-3 submenu">
+		<h2 class="text-white text-center font-weight-bold pt-5 pb-3 fontsize" style="font-size: 3vW;">나보다 내 실력을 더 잘 아는 AI학습!<br>써밋수학</h2>
+		<p class="text-white text-center font-weight-bold pt-3 pb-4 fontsize01" style="font-size: 18px">스피드 수학으로 수.연산 영역의 개념을 빠르게 완성하고,<br>스코어수학으로 학교 공부를 대비!</p>
+	</div>
+	<div class="container submenu">
+				<div class="row bg-white text-center py-3">
 					<div class="col-md-4" style="border-right: 1px solid lightgray;">
-						<a href="#" style="font-size: 18px;" class="Aactive">써밋 스피드수학</a>
+						<a href="#!" style="font-size: 18px;" class="speed">써밋 스피드수학</a>
 					</div>
 					<div class="col-md-4" style="border-right: 1px solid lightgray;">
-						<a href="#" style="font-size: 18px;">써밋 스코어수학</a>
+						<a href="#!" style="font-size: 18px;" class="score">써밋 스코어수학</a>
 					</div>
 					<div class="col-md-4">
-						<a href="#" style="font-size: 18px;">특장점</a>
+						<a href="#!" style="font-size: 18px;" class="good">특장점</a>
 					</div>
 				</div>
 
 	</div>
 </section>
- 
-<div style="height: 2000px;"></div>
+
+<!-- section2 -->
+<div class="img01">
+	<img src="images/sub01_01.png" alt="" class="d-none d-md-block w-100">
+	<img src="images/sub01_01_m.png" alt="" class="d-block d-md-none w-100">
+</div>
+<div class="img02">
+	<img src="images/sub01_02.png" alt="" class="d-none d-md-block w-100">
+	<img src="images/sub01_02_m.png" alt="" class="d-block d-md-none w-100">
+</div>
+<div class="img03">
+	<img src="images/sub01_03.png" alt="" class="d-none d-md-block w-100">
+	<img src="images/sub01_03_m.png" alt="" class="d-block d-md-none w-100">
+</div>
+
+<!-- <div class="imgWrap">
+	<img src="images/sub01_01.png" alt="" class="img01">
+	<img src="images/sub01_02.png" alt="" class="img02">
+	<img src="images/sub01_03.png" alt="" class="img03">
+</div>
+
+
+
+
+<div class="imgWrap_m">
+	<img src="images/sub01_01_m.png" alt="" class="img01">
+	<img src="images/sub01_02_m.png" alt="" class="img02">
+	<img src="images/sub01_03_m.png" alt="" class="img03">
+</div> -->
+
+
+
  <div class="top">top</div>
 
 </body>

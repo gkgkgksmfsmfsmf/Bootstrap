@@ -108,7 +108,16 @@
 
 	@media(max-width: 560px){
 		.BR{border-right: none !important;}
+		.imgWrap{display: none !important;}
+		.imgWrap_m{display: block !important;}
+
 	}
+
+	.imgWrap{display: block;}
+	.imgWrap_m{display: none;}
+
+	.imgWrap img{width: 100%;}
+	.imgWrap_m img{width: 100%;}
 
 	.BR{border-right: 1px solid #fff;}
 
@@ -116,7 +125,7 @@
 	/*sub01*/
 
 	.sub01_bg{
-		background-image: url(../images/sub01.jpg);
+		background-image: url(../images/visual_bg.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -126,3 +135,8 @@
 		content: "";
 		
 	}
+
+	a.Mactive{color:red;font-weight: bold;}
+
+	.fontsize{font-size: }
+	.fontsize01{}
