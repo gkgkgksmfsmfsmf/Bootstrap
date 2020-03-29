@@ -20,7 +20,7 @@
 	<script>
 		$(function(){
 
-				var img01 = $(".img01").offset().top;
+            var img01 = $(".img01").offset().top;
 		   	var img02 = $(".img02").offset().top;
 		   	var img03 = $(".img03").offset().top;
 
@@ -67,7 +67,7 @@
 										$(".submenu").removeClass("fixed-top");
 								}
 
-								if(st>=img01){
+								if(st>0){
 									$(".speed").addClass("Mactive");
 									$(".good").removeClass("Mactive");
 									$(".score").removeClass("Mactive");
@@ -111,9 +111,11 @@
 		      <li class="nav-item active font-weight-bold">
 		        <a class="nav-link font-weight-bold" href="sub01.html">써밋수학 프로그램</a>
 		      </li>
+<!--
 		      <li class="nav-item">
 		        <a class="nav-link font-weight-bold" href="sub02.html">써밋수학 체험하기</a>
 		      </li>
+-->
 		      <li class="nav-item">
 		        <a class="nav-link font-weight-bold" href="sub03.html">스마트 학습관</a>
 		      </li>
