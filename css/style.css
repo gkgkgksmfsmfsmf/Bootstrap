@@ -103,6 +103,11 @@
 		to{width: 100%;opacity: 1}
 	}
 
+    .ani03{
+	height:6px;
+	opacity: 0
+	}
+
     .ani03.Ani{
 		animation: flow 1s forwards;
 	}
