@@ -102,6 +102,14 @@
 		from{width: 0;}
 		to{width: 100%;opacity: 1}
 	}
+
+    .ani03.Ani{
+		animation: flow 1s forwards;
+	}
+	@keyframes flow{
+		from{width: 0;}
+		to{width: 100%;opacity: 1}
+	}
 		
 		
 
@@ -114,9 +122,15 @@
 
 		.fontsize{font-size: 27px !important;}
 		.fontsize01{font-size:15px !important;}
+        
+        
+		.sub03font{font-size:22px !important;}
+		.sub03font01{font-size:25px !important;}
 
 
 	}
+    
+.sub03font01{font-size:35px;}
 
 	.imgWrap{display: block;}
 	.imgWrap_m{display: none;}
