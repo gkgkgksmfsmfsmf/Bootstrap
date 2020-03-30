@@ -31,6 +31,12 @@
 
 		.background{background-color: #fbf0ee;}
 
+		.section2_img{
+			background-image: url(../images/section2_img.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
 		.top{
 			position: fixed;
 			right: 50px;
@@ -164,7 +170,7 @@
 	/*sub01*/
 
 	.sub01_bg{
-		background-image: url(../images/visual_bg.jpg);
+		background-image: url(../images/section2_img.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 	}

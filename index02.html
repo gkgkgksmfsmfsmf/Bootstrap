@@ -29,16 +29,17 @@
 				var count3 = 0;
 				var num3 =0;
 				
-
-				$(window).scroll(function(){
-						$(".menu-top").addClass("fixed-top");
-						$(document).mousewheel(function(event,delta){
+					$(document).mousewheel(function(event,delta){
 							if(delta<0){
 							$(".top").addClass("addtop");
 						}else{
 							$(".top").removeClass("addtop");
 						}
 						});
+
+				$(window).scroll(function(){
+						$(".menu-top").addClass("fixed-top");
+						
 
 
 						var sTop = $(this).scrollTop();
@@ -215,7 +216,7 @@
  </section>
 
  <!-- section_2 -->
- <section class="bgImg py-3">
+ <section class="section2_img py-3">
  	<div class="container py-5 why">
 
 		<div class="row">
@@ -268,21 +269,21 @@
 
              		<div class="col-md-4 col-12">
              			<div class="col-12 mb-4">
-             				<img src="images/icon.png" alt="">
+             				<img src="images/icon01.png" alt="">
              			</div>
 	 			 				    <p class="col-12 rgbaW rounded-lg py-4">학생이 문제를 풀때마다<br> 특허받은 AI알고리즘으로 취약부분 분석</p>
              		</div>
 
  			 				    <div class="col-md-4 col-12">
  			 				    	<div class="col-12 mb-4">
- 			 				    		<img src="images/icon.png" alt="">
+ 			 				    		<img src="images/icon01.png" alt="">
  			 				    	</div>
  			 				    	<p class="col-12 rgbaW rounded-lg py-4">학생의 축적된 데이터로<br> 실력 향상에 꼭 필요한 문제만 제시</p>
  			 				    </div>
 
  			 				    <div class="col-md-4 col-12">
  			 				    	<div class="col-12 mb-4">
- 			 				    		<img src="images/icon.png" alt="">
+ 			 				    		<img src="images/icon01.png" alt="">
  			 				    	</div>
  			 				    	<p class="col-12 rgbaW rounded-lg py-4">딥러닝을 통한 정확한<br> 분석과 진단으로 철저히 개인화된 학습</p>
  			 				    </div>
