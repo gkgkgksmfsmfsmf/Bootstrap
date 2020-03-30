@@ -6,18 +6,30 @@
 		    -webkit-box-shadow: none;
 		    box-shadow: none;
 		    border: 0 none;
-				margin-bottom: 0;}
-		/*.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
-		    position: absolute;
-		    bottom: 30px;
-		    width: 100%;
-		}*/
+				margin-bottom: 0;
+				background:none;
+			}
+
+
+.bx-wrapper .bx-controls-direction a {display: none;}
+/*.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}*/
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #e32322;
+}
 
 		.slideBg{
-			background-image: url(../images/slideBg.png);
+			background-image: url(../images/BGG.png);
 			background-repeat:no-repeat;
 			background-size: cover; 
+			width: 100%
 		}
+
+		.background{background-color: #fbf0ee;}
 
 		.top{
 			position: fixed;
