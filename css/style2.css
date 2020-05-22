@@ -23,7 +23,7 @@
 }
 
 		.slideBg{
-			background-image: url(../images/BGG.png);
+			background-image: url(../images/BGG2.jpg);
 			background-repeat:no-repeat;
 			background-size: cover; 
 			width: 100%
@@ -104,7 +104,7 @@
 		
 
 	.ani.Ani{
-		animation: flow 1s forwards;
+		animation: flow 3s infinite;
 	}
 
 	.ani01{
@@ -117,8 +117,8 @@
 		animation: flow 1s forwards;
 	}
 	@keyframes flow{
-		from{width: 0;opacity: 1}
-		to{width: 100%;}
+		from{width: 0;}
+		to{width: 100%;opacity: 1}
 	}
 
     .ani03{
